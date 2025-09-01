@@ -34,7 +34,7 @@ A resilient Python + Playwright scraper that reuses or creates an authenticated 
 
 - From the project directory:
   ```
-  python /home/harshvm/Desktop/IDEN/fin2.py
+  python /home/harshvm/Desktop/IDEN/final_script.py
   ```
 - Output written to: product_table.json
 - Session file written/merged at: playwright_state.json
@@ -48,7 +48,7 @@ A resilient Python + Playwright scraper that reuses or creates an authenticated 
 
 ## 💡 Tips for excellence
 
-- Adjust selectors in [fin2.py](/home/harshvm/Desktop/IDEN/fin2.py) if your build uses different labels or structure.
+- Adjust selectors in [final_script.py](/home/harshvm/Desktop/IDEN/final_script.py) if your build uses different labels or structure.
 - Increase timeouts if the target is slow to respond.
 - Keep playwright_state.json in the same directory so subsequent runs reuse/merge cookies and avoid repeated logins.
 - For debugging, set headless=False in `fin2.run` to watch the browser.
@@ -60,7 +60,7 @@ A resilient Python + Playwright scraper that reuses or creates an authenticated 
 ## 🐛 Troubleshooting
 
 - Missing env vars -> script raises an error; ensure .env or exported env vars are present.
-- If automatic detection of the product table fails, inspect the page structure and update table/card selectors in [fin2.py](/home/harshvm/Desktop/IDEN/fin2.py).
+- If automatic detection of the product table fails, inspect the page structure and update table/card selectors in [final_script.py](/home/harshvm/Desktop/IDEN/final_script.py).
 
 ## 📝 License / Notes
 
@@ -76,16 +76,16 @@ Summary
 - Submit the final script via the "Submit Script" page in the challenge repo.
 
 Files
-- Main script: [fin2.py](/home/harshvm/Desktop/IDEN/fin2.py)
+- Main script: [final_script.py](/home/harshvm/Desktop/IDEN/final_script.py)
 - Output JSON: product_table.json (created by the script)
 - Stored session: playwright_state.json (created/merged by the script)
 
-Key functions (in fin2.py)
-- [`fin2.run`](/home/harshvm/Desktop/IDEN/fin2.py) — main entrypoint that orchestrates session reuse/login, navigation, extraction and output.
-- [`merge_and_persist_storage_state`](/home/harshvm/Desktop/IDEN/fin2.py) — merges new cookies/origins into existing playwright_state.json on every run.
-- [`try_fill`](/home/harshvm/Desktop/IDEN/fin2.py), [`try_click_by_text`](/home/harshvm/Desktop/IDEN/fin2.py) — resilient interaction helpers.
-- [`ensure_all_rows_loaded`](/home/harshvm/Desktop/IDEN/fin2.py) — scrolls / clicks pagination to load all rows.
-- [`extract_table_to_list`](/home/harshvm/Desktop/IDEN/fin2.py), [`parse_products_from_text`](/home/harshvm/Desktop/IDEN/fin2.py), [`normalize_row_dict`](/home/harshvm/Desktop/IDEN/fin2.py) — extraction and normalization helpers.
+Key functions (in final_script.py)
+- [`fin2.run`](/home/harshvm/Desktop/IDEN/final_script.py) — main entrypoint that orchestrates session reuse/login, navigation, extraction and output.
+- [`merge_and_persist_storage_state`](/home/harshvm/Desktop/IDEN/final_script.py) — merges new cookies/origins into existing playwright_state.json on every run.
+- [`try_fill`](/home/harshvm/Desktop/IDEN/final_script.py), [`try_click_by_text`](/home/harshvm/Desktop/IDEN/final_script.py) — resilient interaction helpers.
+- [`ensure_all_rows_loaded`](/home/harshvm/Desktop/IDEN/final_script.py) — scrolls / clicks pagination to load all rows.
+- [`extract_table_to_list`](/home/harshvm/Desktop/IDEN/final_script.py), [`parse_products_from_text`](/home/harshvm/Desktop/IDEN/final_script.py), [`normalize_row_dict`](/home/harshvm/Desktop/IDEN/final_script.py) — extraction and normalization helpers.
 
 Requirements
 - Python 3.8+
@@ -114,7 +114,7 @@ Run
 - From the project directory:
 ```
 
-python /home/harshvm/Desktop/IDEN/fin2.py
+python /home/harshvm/Desktop/IDEN/final_script.py
 
 ```
 - Output written to: product_table.json
@@ -127,7 +127,7 @@ Behavior notes
 - Extraction: prefers table extraction (thead/tbody) and falls back to parsing card-like text blobs. `ensure_all_rows_loaded` attempts clicks/scrolls to load paginated or lazy-loaded content.
 
 Tips for excellence
-- Adjust selectors in [fin2.py](/home/harshvm/Desktop/IDEN/fin2.py) if your build uses different labels or structure.
+- Adjust selectors in [final_script.py](/home/harshvm/Desktop/IDEN/final_script.py) if your build uses different labels or structure.
 - Increase timeouts if the target is slow to respond.
 - Keep playwright_state.json in the same directory so subsequent runs reuse/merge cookies and avoid repeated logins.
 - For debugging, set headless=False in `fin2.run` to watch the browser.
@@ -137,7 +137,7 @@ Submitting
 
 Troubleshooting
 - Missing env vars -> script raises an error; ensure .env or exported env vars are present.
-- If automatic detection of the product table fails, inspect the page structure and update table/card selectors in [fin2.py](/home/harshvm/Desktop/IDEN/fin2.py).
+- If automatic detection of the product table fails, inspect the page structure and update table/card selectors in [final_script.py](/home/harshvm/Desktop/IDEN/final_script.py).
 
 License / Notes
 - Keep credentials secure. Do not commit .env with secrets
